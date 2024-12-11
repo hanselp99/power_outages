@@ -36,7 +36,9 @@ The main columns I will be focusing will be:
 
 For cleaning I decided to first drop the columns I was not interested in and focus on the columns I had. This left me with the following columns: 'YEAR', 'MONTH', 'U.S._STATE', 'NERC.REGION', 'CLIMATE.REGION','ANOMALY.LEVEL', 'CLIMATE.CATEGORY', 'OUTAGE.START.DATE', 'OUTAGE.START.TIME', 'OUTAGE.RESTORATION.DATE', 'OUTAGE.RESTORATION.TIME', 'CAUSE.CATEGORY', 'CAUSE.CATEGORY.DETAIL', 'OUTAGE.DURATION', 'POPULATION'.
 
-After this process, there were still some unnecessary columns that were relevant, but needed to be edited. For instance, for OUTAGE_START.TIME and OUTAGE_START.DATE I decided to combine them into a pd.Timestamp object type in order to make the values much more easier and useful. I did the same thing with OUTAGE.RESTORATION.DATE and OUTAGE.RESTORATION.TIME
+After this process, there were still some unnecessary columns that were relevant, but needed to be edited. For instance, for OUTAGE_START.TIME and OUTAGE_START.DATE I decided to combine them into a pd.Timestamp object type in order to make the values much more easier and useful. I did the same thing with OUTAGE.RESTORATION.DATE and OUTAGE.RESTORATION.TIME. This dropped the following four colummns off and introduced two new ones: OUTAGE_START and OUTAGE_RESTOR.
+
+Finally, I decided to fill in the null values of CLIMATE.REGION with No Climate Region. The reason for this is that there are still useful values with this value, which is why I wanted to acknowledge it by creating a new attrbiute for them.
 
 ### Exploratory Data Analysis
 
