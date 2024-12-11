@@ -32,16 +32,11 @@ The main columns I will be focusing will be:
 
 ## Data Cleaning and Exploratory Data Analysis
 
-<iframe
-  src="assets/file-name.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
-
 ### Cleaning
 
+For cleaning I decided to first drop the columns I was not interested in and focus on the columns I had. This left me with the following columns: 'YEAR', 'MONTH', 'U.S._STATE', 'NERC.REGION', 'CLIMATE.REGION','ANOMALY.LEVEL', 'CLIMATE.CATEGORY', 'OUTAGE.START.DATE', 'OUTAGE.START.TIME', 'OUTAGE.RESTORATION.DATE', 'OUTAGE.RESTORATION.TIME', 'CAUSE.CATEGORY', 'CAUSE.CATEGORY.DETAIL', 'OUTAGE.DURATION', 'POPULATION'.
 
+After this process, there were still some unnecessary columns that were relevant, but needed to be edited. For instance, for OUTAGE_START.TIME and OUTAGE_START.DATE I decided to combine them into a pd.Timestamp object type in order to make the values much more easier and useful. I did the same thing with OUTAGE.RESTORATION.DATE and OUTAGE.RESTORATION.TIME
 
 ### Exploratory Data Analysis
 
