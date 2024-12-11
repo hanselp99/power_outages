@@ -11,21 +11,21 @@ The main columns I will be focusing will be:
 
 | Column  | Description |
 | ------------- | ------------- |
-| Year  | Content Cell  |
-| Month  | Content Cell  |
-| US State  | Content Cell  |
-| NERC Region  | Content Cell  |
-| Climate Region  | Content Cell  |
-| Anomaly Level  | Content Cell  |
-| Climate Category  | Content Cell  |
-| Outage Start Date  | Content Cell  |
-| Outage Start Time  | Content Cell  |
-| Outage Restoration Date  | Content Cell  |
-| Outage Restoration Time  | Content Cell  |
-| Cause Category  | Content Cell  |
-| Cause Category Detail  | Content Cell  |
-| Outage Duration  | Content Cell  |
-| Population  | Content Cell  |
+| Year  | Year when Power outage occurred  |
+| Month  | Month when power outage occurred  |
+| US State  | US State when power outage occurred  |
+| NERC Region  | NERC region when power outage occurred  |
+| Climate Region  | Climate region when power outage occurred  |
+| Anomaly Level  | Oceanic El Niño/La Niña (ONI) index referring to the cold and warm episodes by season   |
+| Climate Category  | Represents the climate episodes  |
+| Outage Start Date  | Date the outage started  |
+| Outage Start Time  | Time the outage started  |
+| Outage Restoration Date  | Date the outage restored  |
+| Outage Restoration Time  | Time the outage restored  |
+| Cause Category  | Cause of the outage  |
+| Cause Category Detail  | Detailed cause of the outage  |
+| Outage Duration  | The total time of the power outage  |
+| Population  | Number of people living in the area  |
 
 ## Data Cleaning and Exploratory Data Analysis
 
