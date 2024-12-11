@@ -152,8 +152,7 @@ I examined the distribution between Year when Outage Duration was missing and no
   frameborder="0"
 ></iframe>
 
-From this bar graph, we can notice that there is a clear difference with each year of power outages when comparing the missingness. We can see a considerably higher missing rate towards the start and end of the 16 year period while non-missing data would stay relatively consistent except from 2011-2014 which a slight increase. This leads to an observed tvd of 0.660, which ends with a p-value of 0.0. With this I reject the null hypothesis in which the distribution between Year when Outage Duration was missing is not the same when it was not missing. They do not retain the same distribution meaning that Outage Duration is dependent to Climate Category
-
+From this bar graph, we can notice that there is a clear difference with each year of power outages when comparing the missingness. We can see a considerably higher missing rate towards the start and end of the 16 year period while non-missing data would stay relatively consistent except from 2011-2014 which a slight increase. This leads to an observed tvd of 0.660, which ends with a p-value of 0.0. With this I reject the null hypothesis in which the distribution between Year when Outage Duration was missing is not the same when it was not missing. They do not retain the same distribution meaning that Outage Duration is dependent to Climate Category.
 
 <iframe
   src="assets/yeartvds.html"
@@ -164,6 +163,14 @@ From this bar graph, we can notice that there is a clear difference with each ye
 
 ## Hypothesis Testing
 
+I will be testing whether Northern climate regions and Southern climate regions have a similar average power outage duration. The reason for this is to test whether climate and location have a big part with the duration of an outage. The relevant columns in this are CLIMATE.REGION and OUTAGE.DURATION. CLIMATE.REGION only takes in regions with north or south in their title.
+
+**The Null Hypothesis:** Northern climate regions and Southern climate regions retain similar average power outage duration
+**The Alternate Hypothesis:** Northern climate regions and Southern climate regions don't retain a similar average power outage duration
+**Test Statistic:** Difference in means, meaning difference in the mean outage duration of each climate region.
+
+I took 10,000 trials on a permutation test in order to deduce the empirical distribution of the test. This is how I can decipher whether the null hypothesis was luck or not. However, i chose a stastical significance of 0.05 for the basic hypothesis test significance.
+
 <iframe
   src="assets/hyp1.html"
   width="800"
@@ -171,12 +178,7 @@ From this bar graph, we can notice that there is a clear difference with each ye
   frameborder="0"
 ></iframe>
 
-<iframe
-  src="assets/hyp2.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
+I received a 0.04 p-value which means with a standard significane level of 0.05, I reject the null hypothesis in which Northern climate regions and Southern climate region don't retain a similar power outage duration. 
 
 ## Framing a Prediction Problem
 ### Problem Identification
