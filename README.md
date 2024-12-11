@@ -42,7 +42,11 @@ Finally, I decided to fill in the null values of CLIMATE.REGION with No Climate 
 
 ### Exploratory Data Analysis
 
+For my exploratory data analysis I want to examine the distribution of univariate and bivariate data. 
+
 #### Univariate Analysis
+
+For my first analysis, I want to observe the count of power outages of the climate region.
 
 <iframe
   src="assets/climate_region_count_fig.html"
@@ -50,6 +54,8 @@ Finally, I decided to fill in the null values of CLIMATE.REGION with No Climate 
   height="600"
   frameborder="0"
 ></iframe>
+
+For my second univariate analysis, I wanted to observe the mean of the NERC average outage_duration. I wanted to know this since I wanted to know if a region has more severe power outage duration.
 
 <iframe
   src="assets/NERC_region_avg_fig.html"
@@ -60,12 +66,16 @@ Finally, I decided to fill in the null values of CLIMATE.REGION with No Climate 
 
 #### Bivariate Analysis
 
+For my first bivariate analysis, I wanted to see the time period of four years compared with the counts of power outages within each climate category. The reason for this is to see the likelihood for certain seasons of weather to cause power outages or if its more likely a normal coincedence. However, more often there were normal climates during most power outages more often than warm and cold climates. However, we can see that there was a sudden spike at 2008-2011 for cold climate in which there was a lot more comparatively to the rest.
+
 <iframe
   src="assets/bivar_climate_cat_years_count.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+
+For my second bivariate analysis, I also wanted to see the time period of power outages compared to each climate region. I chose to make it a 4-year period line graph that compares Northern, Southern, and the other climate regions in order to observe any patterns in power outages over time with these two geographical areas. Surprisingly with the rising usage of electronics, there are shorter power outages overall. In addition, there was strange spike within the 2004-2007 for longer power outages.
 
 <iframe
   src="assets/bivar_climate_year_outage.html"
@@ -75,6 +85,10 @@ Finally, I decided to fill in the null values of CLIMATE.REGION with No Climate 
 ></iframe>
 
 #### Grouping and Aggregation
+
+Finally, I decided to group climate region and year on anomaly level to see the average anomaly level for these actions. The reason for this is to see if certain climate regions in years have a certain climate category during these years. However, this came with many null values due to the fact that some anomaly levels didn't exist in the graph leaving them as 0.
+
+'|      2000 |   2001 |      2002 |       2003 |     2004 |       2005 |      2006 |      2007 |      2008 |      2009 |       2010 |      2011 |       2012 |      2013 |      2014 |    2015 |     2016 |\n|----------:|-------:|----------:|-----------:|---------:|-----------:|----------:|----------:|----------:|----------:|-----------:|----------:|-----------:|----------:|----------:|--------:|---------:|\n| -0.6      |   0    | -0.2      |  0.283333  | 0.4      |  0.52      |  0.233333 | -0.76     | -0.620833 | -0.28     | -0.675     | -0.4975   |  0.0681818 | -0.29375  | -0.268421 | 1.26429 | 0.5      |\n|  0        |   0    |  0.1      |  0.12      | 0.4      | -0.07      | -0.25     | -0.255556 | -0.63     |  0.377778 | -1.12308   | -0.517647 | -0.2125    | -0.28     | -0.294444 | 1.475   | 1.3      |\n|  0        |   0    |  0        |  0         | 0        |  0         |  0.466667 |  0        | -0.7      |  0        |  0         | -0.4      |  0         |  0        |  0        | 0       | 0        |\n| -0.9      |  -0.25 |  1.13333  |  0.208333  | 0.457143 |  0.0666667 | -0.0625   | -0.281818 | -0.628571 |  0.02     | -0.0642857 | -0.718072 |  0.0212121 | -0.280952 | -0.475    | 1.37273 | 1.05     |\n|  0        |   0    |  0        |  0.1       | 0.233333 |  0         |  0.627273 | -0.2      | -0.5      | -0.1      | -1.4       | -0.662162 | -0.392     | -0.28     | -0.371429 | 1.325   | 1.00714  |\n| -0.833333 |  -0.2  |  0.666667 | -0.0333333 | 0.363636 |  0.0909091 |  0.08     | -0.7125   | -0.4      |  0.126316 | -0.261111  | -0.606061 | -0.217391  | -0.264286 | -0.273333 | 1.39    | 0.466667 |\n| -0.95     |  -0.1  |  0.95     |  0.3       | 0.534615 | -0.0333333 |  0.166667 | -0.5      | -0.871429 |  0.04     | -0.428571  | -0.59     | -0.0363636 | -0.269231 | -0.408333 | 0.85    | 0.166667 |\n| -0.833333 |   0    |  0.2      |  0.1       | 0.433333 |  0.2       |  0.05     | -0.4      | -1.3      |  0.766667 | -0.65      | -0.617647 | -0.02      | -0.309091 | -0.333333 | 0.87    | 1.37143  |\n| -0.7      |  -0.4  |  0.84     |  0.26      | 0.45     | -0.03      |  0.244444 | -0.566667 | -0.76087  |  0.584615 | -0.508     | -0.733333 | -0.0714286 | -0.266667 | -0.2625   | 1.22308 | 1.66     |\n|  0        |   0    |  0        |  0         | 0.3      |  0         |  0.9      |  0        | -0.5      |  0.633333 | -1         | -0.766667 |  0         | -0.233333 | -0.4      | 0       | 0        |'
 
 ## Assessment of Missingness
 ### NMAR Analysis
@@ -87,12 +101,20 @@ Here I would like to test for its Missingness by comparing it to two columns: Cl
 
 #### Climate Category
 
+I examined the distribution between Climate Category when Outage Duration was missing and not missing.
+
+**Null Hypothesis:** The distribution between Climate Category when Outage Duration was missing is the same when it was not missing.
+
+**Alternate Hypothesis:** The distribution between Climate Category when Outage Duration was missing is not the same when it was not missing.
+
 <iframe
   src="assets/climate_category_missing.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+
+From this bar graph, we can notice that there is a clear difference between warm and normal climates when comparing the missingness. We need to consider this factor throughout my observations. This leads to an observed tvd of 0.318, which ends with a p-value of 0.0. With this I reject the null hypothesis in which the distribution between Cliamte Category when Outage Duration was missing is not the same when it was not missing. They do not retain the same distribution meaning that Outage Duration is dependent to Climate Category
 
 <iframe
   src="assets/tvds_missing1.html"
@@ -103,12 +125,21 @@ Here I would like to test for its Missingness by comparing it to two columns: Cl
 
 #### Year
 
+I examined the distribution between Year when Outage Duration was missing and not missing.
+
+**Null Hypothesis:** The distribution between Year when Outage Duration was missing is the same when it was not missing.
+
+**Alternate Hypothesis:** The distribution between Year when Outage Duration was missing is not the same when it was not missing.
+
 <iframe
   src="assets/year_missing.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+
+From this bar graph, we can notice that there is a clear difference with each year of power outages when comparing the missingness. We can see a considerably higher missing rate towards the start and end of the 16 year period while non-missing data would stay relatively consistent except from 2011-2014 which a slight increase. This leads to an observed tvd of 0.660, which ends with a p-value of 0.0. With this I reject the null hypothesis in which the distribution between Year when Outage Duration was missing is not the same when it was not missing. They do not retain the same distribution meaning that Outage Duration is dependent to Climate Category
+
 
 <iframe
   src="assets/yeartvds.html"
@@ -148,10 +179,9 @@ I believed that my DecisionTreeClassifier worked very well as my F1-score was 0.
 ## Final Model
 My final model was a random forest classifier model using the features Climate Region, Year, Month, and Outage Duration. Although the slight change, based on the other values, there wasn't much to change from the baseline model than the final model. However, some notable improvements occurred especially through the inclusion of transforming Month into season and one hot encoding it. This lead to a tremondous increase on both training and test data predictions.
 
-My baseline model included Climate Region(nominal variable) since the location of the climate category would be relevant to the climate region. It also include Year (nominal variable) due to certain years having much higher climates compared to others, and Outage Duration (quantitative variable) since the data is throughly based on the data corresponding to it in which extreme values would likely be correlated with extreme climates
+My final model included Climate Region(nominal variable) since the location of the climate category would be relevant to the climate region. It also include Year (ordinal variable) due to certain years having much higher climates compared to others, and Outage Duration (quantitative variable) since the data is throughly based on the data corresponding to it in which extreme values would likely be correlated with extreme climates. However, the main change that I included was Month (ordinal variable), due to the seasons it has per month allows it to be a major change.
 
-I believed that my RandomForestClassifier worked very well as my F1-score was 0.718.
-
+ My RandomForestClassifier model worked very well as my F1-score was 0.883.
 
 ## Fairness Analysis
 For my fairness analysis, I decided to make my groups to be between the more extreme seasons (Summer and Winter) versus the less extreme seasons (Fall and Spring). I decided on these group because, the seasons will have a huge impact on predictions as it provided a major boost during my final model. 
