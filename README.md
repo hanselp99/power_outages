@@ -1,8 +1,11 @@
 # Regional Effects on Power Outages
+
 This is a project for DSC 80 at UCSD
+
 By Hansel Puthenparambil
 
 ## Introduction
+
 In this project, I set on to examine a dataset on major power outages in the United States from January 2000 to July 2016. This dataset is taken from the Purdue University's Laboratory for Advancing Sustainable Critical Infrastructure. From this dataset, there are about 1534 rows to look through along with 56 columns. Within this dataset, it retains several bounds of information including the regions the outages occurred from, the general duration and occurrence, general population information per area and the effects on customers and industries. 
 
 The main aspect of this dataset I wish to find out is how climate can be predicted from this measure and how these sparks of. The reason for its importance is because climates can have an unique effect on the infrastructure in which windy areas can cause power shutdowns and potential warm seasons can lead to dangers in fire. By looking into this deeper, we can see a potential connection within climate and power outages which can be detrimental in predicting on whether you should be prepared for power outages given the climate of your area.
@@ -41,11 +44,16 @@ The main columns I will be focusing will be:
 
 ## Assessment of Missingness
 ### NMAR Analysis
-Within this dataset, there are a few values that are missing within this dataframe. For instance, 9 values from Month and Climate Region are missing which is likely due to certain regions. This is due to an NERC regoin, ASCC which lacks most relevant data points in the dataset along with WSCC which lacks its Month and Outage Restoration. Due to this, these values have been imputed or deleted in order to maintain relevant information
+Within this dataset, there are a few values that are missing within this dataframe. For instance, 9 values from Month and Climate Region are missing which is likely due to certain regions. This is due to an NERC regoin, ASCC which lacks most relevant data points in the dataset along with WSCC which lacks its Month and Outage Restoration. Due to this, these values have been imputed or deleted in order to maintain relevant information. Primarily very few values have been missing on these columns which likely induces that it is not dependent on another column.
 
 ### Missing Dependency
 However, one key factor that I would like to take a look at is OUTAGE.DURATION due to the several missing values it seems to have and its potential dependence on other columns.
 
+Here I would like to test for its Missingness by comparing it to two columns: Climate Category and Year.
+
+#### Climate Category
+
+#### Year
 
 ## Hypothesis Testing
 
