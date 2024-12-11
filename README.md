@@ -32,13 +32,50 @@ The main columns I will be focusing will be:
 
 ## Data Cleaning and Exploratory Data Analysis
 
+<iframe
+  src="assets/file-name.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 ### Cleaning
+
+
 
 ### Exploratory Data Analysis
 
 #### Univariate Analysis
 
+<iframe
+  src="assets/climate_region_count_fig.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/NERC_region_avg_fig.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 #### Bivariate Analysis
+
+<iframe
+  src="assets/bivar_climate_cat_years_count.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/bivar_climate_year_outage.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 #### Grouping and Aggregation
 
@@ -53,9 +90,51 @@ Here I would like to test for its Missingness by comparing it to two columns: Cl
 
 #### Climate Category
 
+<iframe
+  src="assets/climate_category_missing.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/tvds_missing1.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 #### Year
 
+<iframe
+  src="assets/year_missing.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/yeartvds.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 ## Hypothesis Testing
+
+<iframe
+  src="assets/hyp1.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/hyp2.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ## Framing a Prediction Problem
 ### Problem Identification
