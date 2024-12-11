@@ -139,18 +139,27 @@ My model will try to predict when the climate category is either warm, cold, or 
 
 I decided to use F1 score to evaluate my model because In addition, due to the balance provided by the f1 score on both precision and recall, it can help lower the class imbalance within my model in which there are far more counts of normal compared to warm and cold.
 ## Baseline Model
-My baseline model was a decision tree classifier model using the features Climate Region, Year, and Outage Duration. I believe my current model is good because it doesn't
+My baseline model was a decision tree classifier model using the features Climate Region, Year, and Outage Duration. I believe my current model is good because it doesn't require much values, adding much more values tended to lead to an overfitting of the training model (0.93) while the testing data would get a value of 0.66.
 
-My baseline model included Climate Region, Year, and Outage Duration
+My baseline model included Climate Region(nominal variable) since the location of the climate category would be relevant to the climate region. It also include Year (nominal variable) due to certain years having much higher climates compared to others, and Outage Duration (quantitative variable) since the data is throughly based on the data corresponding to it in which extreme values would likely be correlated with extreme climates
 
+I believed that my DecisionTreeClassifier worked very well as my F1-score was 0.718.
 
 ## Final Model
+My final model was a random forest classifier model using the features Climate Region, Year, Month, and Outage Duration. Although the slight change, based on the other values, there wasn't much to change from the baseline model than the final model. However, some notable improvements occurred especially through the inclusion of transforming Month into season and one hot encoding it. This lead to a tremondous increase on both training and test data predictions.
 
+My baseline model included Climate Region(nominal variable) since the location of the climate category would be relevant to the climate region. It also include Year (nominal variable) due to certain years having much higher climates compared to others, and Outage Duration (quantitative variable) since the data is throughly based on the data corresponding to it in which extreme values would likely be correlated with extreme climates
+
+I believed that my RandomForestClassifier worked very well as my F1-score was 0.718.
 
 
 ## Fairness Analysis
-For my fairness analysis, I decided to make my groups to be between the more extreme seasons (Summer and Winter) versus the less extreme seasons (Fall and Spring). I decided on these group because, the seasons will have a huge impact on depe
+For my fairness analysis, I decided to make my groups to be between the more extreme seasons (Summer and Winter) versus the less extreme seasons (Fall and Spring). I decided on these group because, the seasons will have a huge impact on predictions as it provided a major boost during my final model. 
+
+I will be using F1 score due to the imbalanced seasons especially with the training model in order to incorporate both precision and recall into calculations. I will be using around 10000 trials with perumation tests in order to decipher the results. My significance level will be the standard value of 0.05.
 
 **Null Hypothesis:** The model is fair, in which the F1 scores for extreme and moderate seasons are roughly the same.
 
 **Alternate Hypothesis:** The model is not fair, in whic the F1 scores for extreme seasons are significantly greater than the F1 scores for the moderate seasons.
+
+After the permuatation test, my observed f1 score had a p-value of 0.0 meaning that I would reject the null hypothesis in which that the model is fair for both extreme and moderate season as the values is significantly different.
